@@ -1,0 +1,29 @@
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+logs/
+*.log
+
+# Airflow runtime files
+airflow/logs/
+airflow/plugins/__pycache__/
+airflow/config/__pycache__/
+airflow/config/
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db

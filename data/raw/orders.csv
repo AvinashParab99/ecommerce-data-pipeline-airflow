@@ -1,0 +1,7 @@
+order_id,customer_id,product,quantity,price,status
+101,C01,Laptop,2,500000,Delivered
+102,C02,Mobile,1,200000,Delivered
+103,C03,Mouse,3,5000,Pending
+104,C04,Keyboard,-2,10000,Delivered
+105,C05,Monitor,1,,Delivered
+106,C06,Headphones,2,3000,Delivered
