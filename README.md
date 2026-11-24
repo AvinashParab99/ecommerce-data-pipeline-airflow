@@ -178,6 +178,12 @@ The PostgreSQL table was verified after execution.
 
 The pipeline also uses conflict handling to prevent duplicate order records during subsequent runs.
 
+## Airflow DAG Execution
+
+The Ecommerce ETL pipeline successfully executed through Apache Airflow.
+
+![Airflow DAG Success](screenshots/airflow-success.png)
+
 ## Learning Outcomes
 
 - Understanding end-to-end ETL architecture.
