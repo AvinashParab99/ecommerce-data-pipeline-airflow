@@ -1,35 +1,31 @@
 
 from datetime import datetime
+import sys
 
 from airflow.sdk import dag, task
 
+# Make project source code accessible
+sys.path.insert(0, "/opt/airflow/project")
+
 
 @dag(
-    dag_id="first_dag",
+    dag_id="ecommerce_etl_pipeline",
     start_date=datetime(2026, 1, 1),
     schedule=None,
     catchup=False,
-    tags=["learning"]
+    tags=["ecommerce", "etl", "learning"]
 )
-def first_dag():
+def ecommerce_etl_pipeline():
 
     @task
-    def hello():
-        print("Hello! My first Airflow DAG is running.")
+    def run_etl():
+        from src.pipeline import run_pipeline
 
-    @task
-    def extract():
-        print("Extracting data...")
+        print("Starting Ecommerce ETL Pipeline...")
+        run_pipeline()
+        print("Ecommerce ETL Pipeline completed successfully!")
 
-    @task
-    def transform():
-        print("Transforming data...")
-
-    @task
-    def load():
-        print("Loading data into database...")
-
-    hello() >> extract() >> transform() >> load()
+    run_etl()
 
 
-first_dag()
+ecommerce_etl_pipeline()
